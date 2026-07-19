@@ -4,13 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Euro Summit 2026</title>
+    <title>Plancha Vanguardia - SODONUCLIM 2026-2028</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Configuraciones de colores exactos basados en la imagen */
         .bg-stripe {
             background: linear-gradient(90deg, #021151 0%, #153fb5 45%, #0d2c88 80%, #03145a 100%);
+            background-size: 200% 100%;
             box-shadow: inset 10px 0 20px rgba(0, 0, 0, 0.4);
+            animation: moverLuces 4s ease-in-out infinite alternate;
+        }
+
+        .bg-stripe:nth-child(even) {
+            animation-delay: 1s;
+        }
+
+        .bg-stripe:nth-child(3n) {
+            animation-delay: 2s;
+        }
+
+        @keyframes moverLuces {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
         }
 
         .bg-circle {
@@ -32,14 +51,13 @@
     <!-- CONTENEDOR PRINCIPAL FIJO -->
     <div class="relative w-full h-screen overflow-hidden">
 
-        <!-- 1. Controlador oculto para la transición -->
+        <!-- Controlador oculto para la transición -->
         <input type="checkbox" id="iniciar" class="peer hidden" />
 
-        <!-- 2. ANTESALA -->
+        <!-- 1. ANTESALA -->
         <div
             class="absolute inset-0 z-50 flex flex-col items-center justify-center transition-opacity duration-1000 peer-checked:opacity-0 peer-checked:pointer-events-none">
-
-            <!-- Fondo de franjas verticales -->
+            <!-- Fondo animado -->
             <div class="absolute inset-0 flex w-full h-full -z-10">
                 <div class="flex-1 bg-stripe"></div>
                 <div class="flex-1 bg-stripe"></div>
@@ -63,29 +81,15 @@
                 <div class="flex-1 bg-stripe"></div>
             </div>
 
-            <!-- Contenedor del Logo -->
+            <!-- Círculo principal -->
             <div class="relative flex items-center justify-center">
-                <!-- Arcos decorativos traseros -->
                 <div class="absolute w-[460px] h-[300px] rounded-[100%] border-[25px] border-[#072a78] -z-10"></div>
-
-                <!-- Círculo principal -->
                 <div
-                    class="relative bg-circle w-[400px] h-[400px] rounded-full flex flex-col items-center justify-center text-white shadow-2xl">
-                    <!-- Texto EURO y SVG Cerebro -->
-                    <div class="flex items-center gap-2">
-                        <span class="text-5xl font-black tracking-tight leading-none">EURO</span>
-                        <svg class="w-10 h-10 text-teal-2026/80 stroke-current" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5" />
-                        </svg>
-                    </div>
-
-                    <span class="text-5xl font-black tracking-tight leading-none mt-1">SUMMIT</span>
-                    <span class="text-8xl font-black text-teal-2026 leading-none -mt-2">2026</span>
-                    <span class="text-xs font-bold tracking-[0.2em] mt-3">SALUD MENTAL & PSIQUIATRÍA</span>
+                    class="relative bg-circle w-[400px] h-[400px] rounded-full flex flex-col items-center justify-center text-white shadow-2xl px-6 text-center">
+                    <span class="text-3xl font-black tracking-tight leading-none mt-1">PLANCHA</span>
+                    <span class="text-4xl font-black tracking-tight leading-none mt-1 text-lime-400">VANGUARDIA</span>
+                    <span class="text-5xl font-black text-teal-2026 leading-none mt-2">2026-2028</span>
+                    <span class="text-xs font-bold tracking-[0.2em] mt-3">SODONUCLIM</span>
                 </div>
             </div>
 
@@ -95,111 +99,116 @@
                 <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                 </svg>
-                Iniciar
+                Ingresar
             </label>
-
         </div>
 
-        <!-- 3. CONTENEDOR DE LA PÁGINA (CON SCROLL) -->
+        <!-- 2. CONTENEDOR DE LA PÁGINA (CON SCROLL) -->
         <div class="relative z-0 h-full w-full overflow-y-auto">
 
-            <!-- SECCIÓN: HERO -->
+            <!-- ==============================
+                 HERO SECTION
+                 ============================== -->
             <section
-                class="relative bg-gradient-to-r from-[#031139] via-[#0d2a71] to-[#01255e] text-white min-h-screen overflow-hidden">
+                class="relative bg-gradient-to-r from-[#031139] via-[#0d2a71] to-[#01255e] text-white min-h-screen overflow-hidden flex flex-col">
                 <!-- Barra de Navegación -->
                 <nav class="flex items-center justify-between p-6 lg:p-8 relative z-10">
-                    <!-- Logotipo -->
                     <div class="flex items-center gap-2">
-                        <div class="flex flex-col text-5xl font-extrabold leading-none">
-                            <span class="text-white">20</span>
-                            <span class="text-lime-400">20</span>
-                        </div>
                         <div class="ml-4 flex flex-col leading-tight border-l-2 border-cyan-300 pl-4 py-1">
-                            <span class="text-3xl font-black text-white">EURO SUMMIT</span>
-                            <span class="text-xs text-cyan-300 font-bold tracking-[0.2em]">SALUD MENTAL &
-                                PSIQUIATRÍA</span>
+                            <span class="text-2xl font-black text-white">VANGUARDIA</span>
+                            <span class="text-xs text-cyan-300 font-bold tracking-[0.2em]">SODONUCLIM 26-28</span>
                         </div>
                     </div>
-
-                    <!-- Menú y Botón -->
-                    <div class="flex items-center space-x-8">
-                        <a href="#" class="text-sm font-semibold hover:text-lime-400 transition">El evento</a>
-                        <a href="#" class="text-sm font-semibold hover:text-lime-400 transition">Expositores</a>
-                        <a href="#" class="text-sm font-semibold hover:text-lime-400 transition">Confirmar</a>
+                    <!-- Menú -->
+                    <div class="hidden lg:flex items-center space-x-6">
+                        <a href="#" class="text-sm font-semibold hover:text-lime-400 transition">Inicio</a>
+                        <a href="#" class="text-sm font-semibold hover:text-lime-400 transition">Sobre Nosotros</a>
+                        <a href="#" class="text-sm font-semibold hover:text-lime-400 transition">La Plancha</a>
+                        <a href="#" class="text-sm font-semibold hover:text-lime-400 transition">Propuesta</a>
                         <button
                             class="bg-lime-400 text-[#031139] px-7 py-3 rounded-full font-bold text-sm hover:brightness-110 transition shadow-lg shadow-lime-900/40">
-                            Confirmar asistencia
+                            Contacto
                         </button>
                     </div>
                 </nav>
 
                 <!-- Contenido Principal Hero -->
                 <div
-                    class="grid grid-cols-1 md:grid-cols-2 gap-16 px-6 lg:px-20 mt-16 lg:mt-24 pb-20 relative z-10 max-w-[1700px] mx-auto">
+                    class="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-16 px-6 lg:px-20 py-10 relative z-10 max-w-[1700px] mx-auto items-center">
                     <!-- Columna Izquierda: Texto y Botones -->
                     <div class="space-y-8 max-w-4xl">
-                        <p class="text-sm font-bold text-cyan-300 tracking-[0.25em]">
-                            — ENCUENTRO ACADÉMICO · REPÚBLICA DOMINICANA —
+                        <p class="text-sm font-bold text-cyan-300 tracking-[0.25em] uppercase">
+                            — PLANCHA VANGUARDIA —
                         </p>
-
-                        <h1 class="text-8xl lg:text-[120px] font-black leading-none tracking-tight">
-                            <span class="text-white">EURO</span><br />
-                            <span class="text-white">SUMMIT</span><br />
-                            <span class="text-lime-400">2026</span>
+                        <h1 class="text-6xl lg:text-[90px] font-black leading-none tracking-tight">
+                            <span class="text-white">Liderando</span><br />
+                            <span class="text-white">el futuro de la</span><br />
+                            <span class="text-lime-400">Nutrición Clínica.</span>
                         </h1>
-
-                        <p class="text-xl lg:text-2xl font-black text-lime-400">
-                            CONECTANDO LA CIENCIA CON LA PRÁCTICA MÉDICA.
+                        <p class="text-xl lg:text-2xl text-gray-100 leading-relaxed max-w-3xl">
+                            Una propuesta construida sobre la evidencia científica, la innovación y el compromiso con
+                            nuestros miembros para fortalecer SODONUCLIM.
                         </p>
-
-                        <p class="text-2xl lg:text-3xl text-gray-100 leading-relaxed max-w-3xl">
-                            Salud mental y psiquiatría: del abordaje clínico a temprana edad al impacto social y
-                            forense.
-                        </p>
-
-                        <div class="flex items-center space-x-6 pt-10">
+                        <div class="flex flex-col sm:flex-row items-center gap-6 pt-6">
                             <button
-                                class="bg-lime-400 text-[#031139] px-12 py-5 rounded-full font-bold text-xl hover:brightness-110 transition flex items-center gap-3 shadow-2xl shadow-lime-950/50">
-                                Confirmar asistencia
-                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                class="w-full sm:w-auto bg-lime-400 text-[#031139] px-10 py-4 rounded-full font-bold text-lg hover:brightness-110 transition flex justify-center items-center gap-3 shadow-2xl">
+                                Conoce nuestra propuesta
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                                     <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
                                 </svg>
                             </button>
                             <button
-                                class="border-2 border-white px-12 py-5 rounded-full font-bold text-xl text-white hover:bg-white hover:text-[#031139] transition">
-                                Conocer el programa
+                                class="w-full sm:w-auto border-2 border-white px-10 py-4 rounded-full font-bold text-lg text-white hover:bg-white hover:text-[#031139] transition text-center">
+                                Conoce la plancha
                             </button>
                         </div>
                     </div>
 
-                    <!-- Columna Derecha: Panel de Detalles -->
+                    <!-- Columna Derecha: Panel de Detalles (Misión/Pilares) -->
                     <div class="md:flex md:justify-end md:items-start pt-12 md:pt-0">
                         <div
-                            class="bg-[#031139]/70 p-10 lg:p-14 rounded-[30px] border border-[#0d2a71] shadow-[0_0_60px_rgba(3,17,57,0.8)] backdrop-blur-md w-full md:max-w-xl space-y-10">
-                            <h2 class="text-3xl font-black text-white leading-tight">
-                                DETALLES DEL ENCUENTRO
-                            </h2>
+                            class="bg-[#031139]/70 p-10 lg:p-14 rounded-[30px] border border-[#0d2a71] shadow-[0_0_60px_rgba(3,17,57,0.8)] backdrop-blur-md w-full md:max-w-xl space-y-8">
+                            <h2 class="text-3xl font-black text-white leading-tight mb-2">NUESTRA MISIÓN</h2>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-6">Somos un equipo de profesionales
+                                comprometidos con fortalecer SODONUCLIM como una sociedad científica moderna,
+                                participativa y referente nacional.</p>
 
                             <!-- Lista de Detalles -->
-                            <div class="space-y-10">
+                            <div class="space-y-8">
                                 <div class="flex items-center gap-6">
-                                    <div class="bg-[#0d2a71] p-5 rounded-2xl">
-                                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
+                                    <div class="bg-[#0d2a71] p-5 rounded-2xl flex-shrink-0">
+                                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
                                             </path>
                                         </svg>
                                     </div>
                                     <div>
-                                        <p class="text-xs text-cyan-300 font-bold tracking-[0.2em]">FECHA</p>
-                                        <p class="text-xl font-bold">Sábado 18 de julio, 2026</p>
+                                        <p class="text-xs text-cyan-300 font-bold tracking-[0.2em] uppercase">Pilar 1
+                                        </p>
+                                        <p class="text-lg font-bold leading-tight">Fortalecimiento institucional</p>
                                     </div>
                                 </div>
-
                                 <div class="flex items-center gap-6">
-                                    <div class="bg-[#0d2a71] p-5 rounded-2xl">
-                                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
+                                    <div class="bg-[#0d2a71] p-5 rounded-2xl flex-shrink-0">
+                                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-cyan-300 font-bold tracking-[0.2em] uppercase">Pilar 2
+                                        </p>
+                                        <p class="text-lg font-bold leading-tight">Educación e Investigación Científica
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-6">
+                                    <div class="bg-[#0d2a71] p-5 rounded-2xl flex-shrink-0">
+                                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
@@ -207,50 +216,23 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <p class="text-xs text-cyan-300 font-bold tracking-[0.2em]">MODALIDAD</p>
-                                        <p class="text-xl font-bold leading-tight">Presencial —<br />Conferencias
-                                            magistrales</p>
+                                        <p class="text-xs text-cyan-300 font-bold tracking-[0.2em] uppercase">Pilar 3
+                                        </p>
+                                        <p class="text-lg font-bold leading-tight">Representación y Crecimiento
+                                            profesional</p>
                                     </div>
                                 </div>
-
-                                <div class="flex items-center gap-6">
-                                    <div class="bg-[#0d2a71] p-5 rounded-2xl">
-                                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                            </path>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <p class="text-xs text-cyan-300 font-bold tracking-[0.2em]">SEDE</p>
-                                        <p class="text-xl font-bold">República Dominicana</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Lema Final con Icono -->
-                            <div class="mt-12 pt-10 border-t border-[#0d2a71] flex items-center gap-4">
-                                <svg class="w-9 h-9 text-cyan-300 flex-shrink-0" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
-                                    </path>
-                                </svg>
-                                <p class="text-base text-gray-200">Conocimiento que transforma, impacto que trasciende.
-                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- SECCIÓN: 01 EL ENCUENTRO -->
+            <!-- ==============================
+                 SECCIÓN: 01 SOBRE NOSOTROS
+                 ============================== -->
             <section
                 class="relative bg-gradient-to-br from-[#030b20] via-[#091b45] to-[#020716] py-24 px-6 lg:px-20 overflow-hidden text-white">
-                <!-- Elementos decorativos de fondo (Curvas y punto luminoso) -->
                 <div class="absolute right-0 top-10 pointer-events-none opacity-60">
                     <svg class="w-[400px] h-[500px]" fill="none" viewBox="0 0 400 500">
                         <path d="M400 0 C200 0, 50 200, 100 500" stroke="#c1db16" stroke-width="1"
@@ -264,267 +246,291 @@
                 </div>
 
                 <div class="max-w-[1400px] mx-auto relative z-10">
-                    <!-- Encabezado -->
                     <div class="max-w-3xl">
-                        <p class="text-[#c1db16] text-xs font-bold tracking-[0.2em] mb-4">
-                            01 · EL ENCUENTRO
+                        <p class="text-[#c1db16] text-xs font-bold tracking-[0.2em] mb-4 uppercase">
+                            01 · Sobre Nosotros & Historia
                         </p>
                         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                            Una visión integral de la salud mental a lo largo del ciclo de la vida.
+                            Construyendo sobre un legado para seguir avanzando.
                         </h2>
                         <p class="text-gray-300 text-lg leading-relaxed max-w-2xl">
-                            Euro Summit 2026 reúne a especialistas nacionales e internacionales en torno a uno de los
-                            desafíos más relevantes de la salud actual: la salud mental y su impacto en la sociedad
-                            dominicana. Conferencias magistrales, discusión interdisciplinaria y análisis de
-                            experiencias globales que conectan la práctica clínica con sus implicaciones sociales y
-                            forenses.
+                            SODONUCLIM ha sido protagonista del desarrollo de la nutrición clínica en la República
+                            Dominicana. Nuestra gestión busca honrar ese legado proyectándolo hacia el futuro mediante
+                            ciencia, innovación y liderazgo. Trabajaremos para impulsar la educación médica continua, la
+                            investigación y la representación institucional.
                         </p>
                     </div>
 
-                    <!-- Grid de Tarjetas -->
+                    <!-- Grid de Tarjetas Pilares -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-                        <!-- Tarjeta 1: Detección temprana -->
                         <div
                             class="bg-[#121633] p-8 rounded-3xl border border-white/5 transition-transform hover:-translate-y-2">
                             <div class="bg-[#1b2656] w-12 h-12 rounded-xl flex items-center justify-center mb-6">
                                 <svg class="w-6 h-6 text-[#009ca6]" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
                                     </path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 11V7m0 4h4m-4 0H8"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold mb-4">Detección temprana</h3>
+                            <h3 class="text-xl font-bold mb-4">Educación e Investigación</h3>
                             <p class="text-gray-400 text-sm leading-relaxed">
-                                Desde la psiquiatría infantil y adolescente hasta la identificación oportuna de
-                                pacientes en riesgo, priorizando la prevención antes que la crisis.
+                                Fomento de la investigación científica y programas de educación médica continua para
+                                asegurar la excelencia académica de nuestros miembros.
                             </p>
                         </div>
-
-                        <!-- Tarjeta 2: Manejo basado en evidencia (Activa) -->
                         <div
                             class="bg-[#054bb4] p-8 rounded-3xl shadow-[0_10px_30px_rgba(5,75,180,0.4)] transition-transform hover:-translate-y-2">
                             <div class="bg-[#3173d6] w-12 h-12 rounded-xl flex items-center justify-center mb-6">
                                 <svg class="w-6 h-6 text-[#c1db16]" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                    </path>
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold mb-4">Manejo basado en evidencia</h3>
+                            <h3 class="text-xl font-bold mb-4">Fortalecimiento Institucional</h3>
                             <p class="text-blue-100 text-sm leading-relaxed">
-                                Atención clínica especializada, tratamiento actualizado y reinserción social como ejes
-                                de una práctica psiquiátrica moderna y rigurosa.
+                                Creación de alianzas estratégicas y consolidación de procesos internos para una sociedad
+                                científica más moderna y estructurada.
                             </p>
                         </div>
-
-                        <!-- Tarjeta 3: Impacto social y forense -->
                         <div
                             class="bg-[#121633] p-8 rounded-3xl border border-white/5 transition-transform hover:-translate-y-2">
                             <div class="bg-[#1b2656] w-12 h-12 rounded-xl flex items-center justify-center mb-6">
                                 <svg class="w-6 h-6 text-[#009ca6]" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold mb-4">Impacto social y forense</h3>
+                            <h3 class="text-xl font-bold mb-4">Crecimiento Profesional</h3>
                             <p class="text-gray-400 text-sm leading-relaxed">
-                                Las implicaciones médico-legales de los trastornos psiquiátricos y la prevención de
-                                consecuencias sociales adversas, desde un enfoque interdisciplinario.
+                                Mayor representación gremial e institucional para dignificar y proyectar la práctica de
+                                la nutriología en todo el territorio nacional.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-
-
-
-
-            <!-- SECCIÓN: 02 EXPOSITORES -->
+            <!-- ==============================
+                 SECCIÓN: 02 LA PLANCHA
+                 ============================== -->
             <section class="relative bg-[#080d24] py-24 px-6 lg:px-20 text-white">
                 <div class="max-w-[1400px] mx-auto relative z-10">
-
-                    <!-- Encabezado -->
                     <div class="max-w-3xl mb-16">
-                        <p class="text-[#c1db16] text-xs font-bold tracking-[0.2em] mb-4">
-                            02 · EXPOSITORES
+                        <p class="text-[#c1db16] text-xs font-bold tracking-[0.2em] mb-4 uppercase">
+                            02 · La Plancha
                         </p>
                         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                            Talento dominicano con<br />impacto global.
+                            Un equipo preparado para construir el futuro.
                         </h2>
                         <p class="text-gray-300 text-lg leading-relaxed max-w-2xl">
-                            Especialistas que conectan a la comunidad médica dominicana con la experiencia clínica y
-                            académica de centros internacionales de referencia.
+                            Profesionales con amplia trayectoria clínica, académica y científica, unidos por un
+                            propósito común: fortalecer nuestra sociedad y generar un mayor impacto en la salud
+                            dominicana.
                         </p>
                     </div>
 
                     <!-- Grid de Tarjetas -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                        <!-- Tarjeta 1 -->
+                        <!-- Presidente -->
                         <div
                             class="bg-[#121633] rounded-3xl overflow-hidden border border-white/10 flex flex-col h-full transition-transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#c1db16]/10">
-                            <!-- Reemplaza el src con la foto real -->
-                            <img src="https://via.placeholder.com/400x350/e5e7eb/9ca3af?text=Foto" alt="Dra. Zuleika"
+                            <img src="images/DR HERIBERTO RODRÍGUEZ BONET.png" alt="Dr. Heriberto Rodríguez Bonet"
                                 class="w-full h-64 object-cover object-top">
                             <div class="p-6 flex-1 flex flex-col">
                                 <span
                                     class="inline-block bg-[#dadd1a] text-[#031139] text-[10px] font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wider">
-                                    Madrid · ES
+                                    Presidente
                                 </span>
-                                <h3 class="text-lg font-bold mb-2">Dra. Zuleika Morillo de Nieto</h3>
-                                <p class="text-gray-400 text-sm leading-relaxed">
-                                    Especialista en salud integral de la adolescencia, psiquiatra infanto-juvenil y
-                                    médico psicoterapeuta.
+                                <h3 class="text-lg font-bold mb-1">Dr. Heriberto Rodríguez Bonet</h3>
+                                <p class="text-[#009ca6] text-xs font-semibold mb-3">Cirugía General · Nutrición Clínica
+                                </p>
+                                <p class="text-gray-400 text-xs leading-relaxed">
+                                    Ideólogo y fundador de SODONUCLIM. Maestro de la Medicina y Cirugía Dominicana.
+                                    Primer cirujano dominicano con postgrado/maestría en Nutrición Clínica y referente
+                                    en formación de especialistas.
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Tarjeta 2 -->
+                        <!-- Vicepresidenta -->
                         <div
                             class="bg-[#121633] rounded-3xl overflow-hidden border border-white/10 flex flex-col h-full transition-transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#c1db16]/10">
-                            <img src="https://via.placeholder.com/400x350/e5e7eb/9ca3af?text=Foto" alt="Dr. Ángel"
+                            <img src="images/FOTO_JC.jpeg" alt="Dra. Jenny Cepeda Marte"
                                 class="w-full h-64 object-cover object-top">
                             <div class="p-6 flex-1 flex flex-col">
                                 <span
                                     class="inline-block bg-[#dadd1a] text-[#031139] text-[10px] font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wider">
-                                    New York, New York, USA
+                                    Vicepresidenta
                                 </span>
-                                <h3 class="text-lg font-bold mb-2">Dr. Ángel Adolfo Caraballo</h3>
-                                <p class="text-gray-400 text-sm leading-relaxed">
-                                    Psiquiatra, psicoterapeuta y psicofarmacólogo de niños, adolescentes y adultos.
+                                <h3 class="text-lg font-bold mb-1">Dra. Jenny Cepeda Marte</h3>
+                                <p class="text-[#009ca6] text-xs font-semibold mb-3">Nutrición Clínica · Diabetología
+                                </p>
+                                <p class="text-gray-400 text-xs leading-relaxed">
+                                    Nutrióloga clínica y diabetóloga. Coordinadora de Nutrición Clínica de CEMDOE.
+                                    Investigadora y docente en UNIBE e INTEC. Promotora de la práctica clínica basada en
+                                    evidencia.
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Tarjeta 3 -->
+                        <!-- Secretaria -->
                         <div
                             class="bg-[#121633] rounded-3xl overflow-hidden border border-white/10 flex flex-col h-full transition-transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#c1db16]/10">
-                            <img src="https://via.placeholder.com/400x350/e5e7eb/9ca3af?text=Foto" alt="Dra. Nubia"
+                            <img src="images/Karen Garrido.jpeg" alt="Dra. Karen Garrido"
                                 class="w-full h-64 object-cover object-top">
                             <div class="p-6 flex-1 flex flex-col">
                                 <span
                                     class="inline-block bg-[#dadd1a] text-[#031139] text-[10px] font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wider">
-                                    Houston, Texas, USA
+                                    Secretaria
                                 </span>
-                                <h3 class="text-lg font-bold mb-2">Dra. Nubia Lluberes</h3>
-                                <p class="text-gray-400 text-sm leading-relaxed">
-                                    Especialista en medicina interna y psiquiatría forense, correccional y comunitaria.
+                                <h3 class="text-lg font-bold mb-1">Dra. Karen Garrido</h3>
+                                <p class="text-[#009ca6] text-xs font-semibold mb-3">Nutrición Clínica · Gerencia Hosp.
+                                </p>
+                                <p class="text-gray-400 text-xs leading-relaxed">
+                                    Especialista en nutrición hospitalaria y enfermedad renal crónica. Expresidenta CMD
+                                    La Romana, exdirectiva SODONUCLIM, docente, investigadora y conferencista.
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Tarjeta 4 -->
+                        <!-- Tesorera -->
                         <div
                             class="bg-[#121633] rounded-3xl overflow-hidden border border-white/10 flex flex-col h-full transition-transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#c1db16]/10">
-                            <img src="https://via.placeholder.com/400x350/e5e7eb/9ca3af?text=Foto" alt="Dr. Ernesto"
+                            <img src="images/Dra. Maribel.jpeg" alt="Dra. Maribel Gómez"
                                 class="w-full h-64 object-cover object-top">
                             <div class="p-6 flex-1 flex flex-col">
                                 <span
                                     class="inline-block bg-[#dadd1a] text-[#031139] text-[10px] font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wider">
-                                    La Vega · RD
+                                    Tesorera
                                 </span>
-                                <h3 class="text-lg font-bold mb-2">Dr. Ernesto Ceara Warden</h3>
-                                <p class="text-gray-400 text-sm leading-relaxed">
-                                    Psiquiatra especializado en salud mental del adulto.
+                                <h3 class="text-lg font-bold mb-1">Dra. Maribel Gómez</h3>
+                                <p class="text-[#009ca6] text-xs font-semibold mb-3">Nutrición Clínica · Oncológica y
+                                    Deportiva</p>
+                                <p class="text-gray-400 text-xs leading-relaxed">
+                                    Nutrióloga clínica con especialización en nutrición oncológica y deportiva.
+                                    Profundamente comprometida con la actualización científica y la atención integral
+                                    del paciente.
                                 </p>
                             </div>
                         </div>
-
                     </div>
 
-                    <!-- Banner de Invitado Especial -->
+                    <!-- Vocales Banner -->
                     <div
-                        class="mt-12 w-full bg-[#0a0f24] border border-dashed border-gray-600 rounded-[30px] py-10 px-8 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
-
-                        <span class="text-[#c1db16] text-sm font-bold tracking-[0.25em] uppercase text-center">
-                            Invitado Especial
+                        class="mt-12 w-full bg-[#0a0f24] border border-dashed border-gray-600 rounded-[30px] p-8 lg:p-12">
+                        <span
+                            class="block text-[#c1db16] text-sm font-bold tracking-[0.25em] uppercase text-center mb-8">
+                            Vocales de la Plancha
                         </span>
-
-                        <!-- Logo Mayo Clinic (Estructura en SVG simulada) -->
-                        <div class="flex flex-col items-center text-white">
-                            <span class="text-xl font-bold leading-none tracking-widest text-center">
-                                MAYO<br />CLINIC
-                            </span>
-                            <!-- Icono de los 3 escudos -->
-                            <svg class="w-14 h-8 mt-2 text-white" viewBox="0 0 70 30" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <!-- Escudo 1 -->
-                                <path d="M10 2 h12 v10 c0 6 -6 10 -6 10 s-6 -4 -6 -10 z" />
-                                <!-- Escudo 2 -->
-                                <path d="M28 2 h12 v10 c0 6 -6 10 -6 10 s-6 -4 -6 -10 z" />
-                                <!-- Escudo 3 -->
-                                <path d="M46 2 h12 v10 c0 6 -6 10 -6 10 s-6 -4 -6 -10 z" />
-                            </svg>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm text-gray-300">
+                            <div class="bg-[#161c3b] p-4 rounded-xl border border-white/5">
+                                <p class="font-bold text-white mb-1">Dr. Luis Felipe Santana</p>
+                                <p class="text-xs">Nutrigenómica y Alimentación Funcional.</p>
+                            </div>
+                            <div class="bg-[#161c3b] p-4 rounded-xl border border-white/5">
+                                <p class="font-bold text-white mb-1">Dra. Yicenia Brito Beltré</p>
+                                <p class="text-xs">Endocrinóloga e infectóloga. Docente UASD.</p>
+                            </div>
+                            <div class="bg-[#161c3b] p-4 rounded-xl border border-white/5">
+                                <p class="font-bold text-white mb-1">Dr. Manuel García Campos</p>
+                                <p class="text-xs">Nutrición Pediátrica Hospital Materno Infantil.</p>
+                            </div>
+                            <div class="bg-[#161c3b] p-4 rounded-xl border border-white/5">
+                                <p class="font-bold text-white mb-1">Dr. Máximo Martínez</p>
+                                <p class="text-xs">Nutriología Clínica y Nutrición Pediátrica.</p>
+                            </div>
+                            <div class="bg-[#161c3b] p-4 rounded-xl border border-white/5">
+                                <p class="font-bold text-white mb-1">Dra. Ysabel Noemí Tejeda</p>
+                                <p class="text-xs">PhD Alimentación y Nutrición. Docente UASD.</p>
+                            </div>
+                            <div class="bg-[#161c3b] p-4 rounded-xl border border-white/5">
+                                <p class="font-bold text-white mb-1">Dra. Rosa E. Rodríguez de B.</p>
+                                <p class="text-xs">Médica metabólica CEDIMAT y fundadora.</p>
+                            </div>
                         </div>
-
                     </div>
                 </div>
             </section>
 
+            <!-- ==============================
+                 SECCIÓN: 03 PROPUESTA & PARTICIPA
+                 ============================== -->
+            <section class="relative bg-[#080d24] py-24 px-6 lg:px-20 text-white border-t border-white/5">
+                <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-            <!-- SECCIÓN: 03 CONFIRMACIÓN -->
-            <section class="relative bg-[#080d24] py-24 px-6 lg:px-20 text-white">
-                <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-                    <!-- Columna Izquierda: Información -->
+                    <!-- Columna Izquierda: Ejes Estratégicos -->
                     <div>
                         <p class="text-[#c1db16] text-xs font-bold tracking-[0.2em] mb-4 uppercase">
-                            03 · Confirmación
+                            03 · Nuestra Propuesta
                         </p>
                         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                            Reserve su lugar en<br />Euro Summit 2026.
+                            10 ejes estratégicos para transformar SODONUCLIM.
                         </h2>
-                        <p class="text-gray-300 text-lg leading-relaxed mb-10 max-w-lg">
-                            Le invitamos a completar el formulario de registro para confirmar su participación en este
-                            importante encuentro.
+                        <p class="text-gray-300 text-lg leading-relaxed mb-8 max-w-lg">
+                            Nuestra propuesta responde a los principales desafíos de la nutrición clínica en República
+                            Dominicana mediante objetivos medibles y acciones concretas.
                         </p>
 
-                        <ul class="space-y-6">
-                            <li class="flex items-start gap-4">
-                                <div class="bg-[#1b2656] p-1.5 rounded-md mt-1">
-                                    <svg class="w-4 h-4 text-[#c1db16]" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                <p class="text-gray-300"><strong class="text-white">Educación médica continua</strong>
-                                    con expositores internacionales.</p>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="bg-[#1b2656] p-1.5 rounded-md mt-1">
-                                    <svg class="w-4 h-4 text-[#c1db16]" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                <p class="text-gray-300"><strong class="text-white">Networking</strong> con la comunidad
-                                    médica dominicana y regional.</p>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="bg-[#1b2656] p-1.5 rounded-md mt-1">
-                                    <svg class="w-4 h-4 text-[#c1db16]" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                <p class="text-gray-300">Confirmaciones enviadas a <strong
-                                        class="text-white">medical@euro.com.do</strong></p>
-                            </li>
-                        </ul>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">1.</span>
+                                    <span class="text-gray-300">Sobrepeso y obesidad</span>
+                                </li>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">2.</span>
+                                    <span class="text-gray-300">Desnutrición hospitalaria</span>
+                                </li>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">3.</span>
+                                    <span class="text-gray-300">Diabetes mellitus tipo 2</span>
+                                </li>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">4.</span>
+                                    <span class="text-gray-300">Nutrición en enf. renal</span>
+                                </li>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">5.</span>
+                                    <span class="text-gray-300">Obesidad infantil</span>
+                                </li>
+                            </ul>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">6.</span>
+                                    <span class="text-gray-300">Lactancia materna</span>
+                                </li>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">7.</span>
+                                    <span class="text-gray-300">Anemia (def. hierro)</span>
+                                </li>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">8.</span>
+                                    <span class="text-gray-300">Seguridad alimentaria</span>
+                                </li>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">9.</span>
+                                    <span class="text-gray-300">Prevención enf. no transm.</span>
+                                </li>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">10.</span>
+                                    <span class="text-gray-300">Nutrición geriátrica</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button
+                            class="bg-[#1b2656] border border-white/10 text-white px-8 py-4 rounded-full font-bold text-sm hover:bg-[#121633] transition shadow-lg flex items-center gap-3">
+                            <svg class="w-5 h-5 text-[#c1db16]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                            </svg>
+                            Descargar propuesta completa
+                        </button>
                     </div>
 
-                    <!-- Columna Derecha: Formulario -->
+                    <!-- Columna Derecha: Formulario Participa -->
                     <div class="bg-[#0e132b] p-8 lg:p-10 rounded-[30px] border border-white/5 shadow-2xl">
+                        <h3 class="text-3xl font-black text-white mb-2">Tu voz importa.</h3>
+                        <p class="text-gray-400 text-sm mb-8">Creemos en una gestión abierta, participativa y cercana.
+                            Queremos escuchar tus ideas y necesidades para construir juntos una SODONUCLIM más fuerte.
+                        </p>
+
                         <form class="space-y-6">
-                            <!-- Fila 1 -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-sm text-gray-300 mb-2 font-medium">Nombre <span
@@ -539,121 +545,66 @@
                                         class="w-full bg-[#161c3b] border border-transparent focus:border-[#c1db16] rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors">
                                 </div>
                             </div>
-
-                            <!-- Fila 2 -->
                             <div>
                                 <label class="block text-sm text-gray-300 mb-2 font-medium">Correo electrónico <span
                                         class="text-[#c1db16]">*</span></label>
                                 <input type="email" placeholder="nombre@correo.com"
                                     class="w-full bg-[#161c3b] border border-transparent focus:border-[#c1db16] rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors">
                             </div>
-
-                            <!-- Fila 3 -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-sm text-gray-300 mb-2 font-medium">Teléfono <span
-                                            class="text-[#c1db16]">*</span></label>
-                                    <input type="tel" placeholder="(809) 000-0000"
-                                        class="w-full bg-[#161c3b] border border-transparent focus:border-[#c1db16] rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors">
-                                </div>
-                                <div>
-                                    <label class="block text-sm text-gray-300 mb-2 font-medium">Especialidad <span
-                                            class="text-[#c1db16]">*</span></label>
-                                    <input type="text" placeholder="Ej. Psiquiatría"
-                                        class="w-full bg-[#161c3b] border border-transparent focus:border-[#c1db16] rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors">
-                                </div>
-                            </div>
-
-                            <!-- Fila 4 -->
                             <div>
-                                <label class="block text-sm text-gray-300 mb-2 font-medium">Centro médico</label>
-                                <input type="text" placeholder="Institución donde labora"
-                                    class="w-full bg-[#161c3b] border border-transparent focus:border-[#c1db16] rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors">
-                            </div>
-
-                            <!-- Fila 5 (Opciones de asistencia) -->
-                            <div>
-                                <label class="block text-sm text-gray-300 mb-2 font-medium">Confirmación de asistencia
+                                <label class="block text-sm text-gray-300 mb-2 font-medium">Tu propuesta o comentario
                                     <span class="text-[#c1db16]">*</span></label>
-                                <div class="grid grid-cols-2 gap-4">
-                                    <button type="button"
-                                        class="bg-[#1a2040] border border-[#c1db16] text-[#c1db16] rounded-xl py-3 font-semibold flex items-center justify-center gap-2 transition-colors">
-                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                        </svg>
-                                        Sí, asistiré
-                                    </button>
-                                    <button type="button"
-                                        class="bg-[#161c3b] border border-transparent text-gray-400 hover:bg-[#1a2040] rounded-xl py-3 font-semibold transition-colors">
-                                        No podré asistir
-                                    </button>
-                                </div>
+                                <textarea rows="4" placeholder="Escribe aquí tus ideas..."
+                                    class="w-full bg-[#161c3b] border border-transparent focus:border-[#c1db16] rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors resize-none"></textarea>
                             </div>
-
-                            <!-- Botón Submit -->
                             <button type="button"
-                                class="w-full bg-[#dadd1a] text-[#031139] font-bold text-lg rounded-full py-4 mt-6 hover:brightness-110 transition flex items-center justify-center gap-2 shadow-xl shadow-[#dadd1a]/10">
-                                Enviar confirmación
+                                class="w-full bg-[#dadd1a] text-[#031139] font-bold text-lg rounded-full py-4 mt-2 hover:brightness-110 transition flex items-center justify-center gap-2 shadow-xl shadow-[#dadd1a]/10">
+                                Enviar propuesta
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
                                 </svg>
                             </button>
-
-                            <!-- Aviso -->
-                            <p class="text-center text-xs text-gray-500 mt-6">
-                                Al enviar acepta nuestro <a href="#"
-                                    class="text-[#005c62] hover:text-[#009ca6] transition-colors">aviso de
-                                    privacidad</a>.
-                            </p>
                         </form>
                     </div>
-
                 </div>
             </section>
 
-            <!-- FOOTER -->
+            <!-- ==============================
+                 FOOTER
+                 ============================== -->
             <footer class="bg-[#0e132b] text-white pt-20 pb-10 px-6 lg:px-20 border-t border-white/5">
                 <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-
-                    <!-- Columna 1: Info -->
+                    <!-- Columna 1 -->
                     <div class="space-y-6">
                         <div class="flex items-center gap-2">
-                            <div class="flex flex-col text-2xl font-extrabold leading-none">
-                                <span class="text-white">20</span>
-                                <span class="text-lime-400">20</span>
-                            </div>
-                            <div class="ml-2 flex flex-col leading-tight border-l border-cyan-300 pl-3">
-                                <span class="text-xl font-bold">EURO SUMMIT</span>
-                                <span class="text-[9px] text-cyan-300 font-bold tracking-[0.2em]">SALUD MENTAL &
-                                    PSIQUIATRÍA</span>
+                            <div class="flex flex-col leading-tight border-l-2 border-cyan-300 pl-4 py-1">
+                                <span class="text-2xl font-black text-white">VANGUARDIA</span>
+                                <span class="text-xs text-cyan-300 font-bold tracking-[0.2em]">SODONUCLIM 26-28</span>
                             </div>
                         </div>
-                        <h3 class="font-bold text-lg">Sobre Euro Limited</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
-                            Fundada el 10 de abril del año 2000, Euro Limited Ltd. cuenta con más de dos décadas de
-                            trayectoria en la industria farmacéutica, con un enfoque estratégico en neurociencias y una
-                            sólida línea de productos de uso general.<br /><br />
-                            A través de espacios académicos independientes, conecta a la comunidad médica dominicana con
-                            expertos e instituciones internacionales.
+                        <p class="text-gray-400 text-sm leading-relaxed max-w-sm italic">
+                            "Creemos en una SODONUCLIM más fuerte, participativa y preparada para liderar el futuro de
+                            la nutrición clínica en la República Dominicana."
                         </p>
+                        <p class="font-bold text-sm text-[#c1db16]">— Dr. Heriberto Rodríguez Bonet <br /><span
+                                class="text-xs text-gray-400 font-normal">Presidente · Plancha Vanguardia</span></p>
                     </div>
-
-                    <!-- Columna 2: Evento -->
+                    <!-- Columna 2 -->
                     <div>
-                        <h3 class="font-bold text-sm tracking-widest text-gray-500 uppercase mb-8">Evento</h3>
+                        <h3 class="font-bold text-sm tracking-widest text-gray-500 uppercase mb-8">Navegación</h3>
                         <ul class="space-y-4 text-gray-300">
-                            <li><a href="#" class="hover:text-lime-400 transition">El encuentro</a></li>
-                            <li><a href="#" class="hover:text-lime-400 transition">Expositores</a></li>
-                            <li><a href="#" class="hover:text-lime-400 transition">Confirmar asistencia</a></li>
+                            <li><a href="#" class="hover:text-lime-400 transition">Inicio</a></li>
+                            <li><a href="#" class="hover:text-lime-400 transition">Sobre Nosotros</a></li>
+                            <li><a href="#" class="hover:text-lime-400 transition">La Plancha</a></li>
+                            <li><a href="#" class="hover:text-lime-400 transition">Descargar Propuesta</a></li>
                         </ul>
                     </div>
-
-                    <!-- Columna 3: Contacto -->
+                    <!-- Columna 3 -->
                     <div>
                         <h3 class="font-bold text-sm tracking-widest text-gray-500 uppercase mb-8">Contacto</h3>
                         <ul class="space-y-4 text-gray-300">
-                            <li>medical@euro.com.do</li>
                             <li>República Dominicana</li>
+                            <li><a href="#" class="hover:text-lime-400 transition">Contacto y Redes Sociales</a></li>
                             <li><a href="#" class="hover:text-lime-400 transition">Aviso de privacidad</a></li>
                         </ul>
                     </div>
@@ -662,11 +613,11 @@
                 <!-- Bottom -->
                 <div
                     class="max-w-[1400px] mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p class="text-gray-500 text-sm">
-                        &copy; 2026 Euro Limited Ltd. · Euro Summit — Salud Mental & Psiquiatría. <br />
-                        Conocimiento que transforma, impacto que trasciende.
+                    <p class="text-gray-500 text-sm text-center md:text-left">
+                        &copy; 2026 Plancha Vanguardia · SODONUCLIM 2026–2028. <br />
+                        Liderando el futuro de la Nutrición Clínica.
                     </p>
-                    <!-- Iconos Redes -->
+                    <!-- Redes -->
                     <div class="flex gap-6 text-lime-400">
                         <a href="#" class="hover:text-white transition"><svg class="w-6 h-6" fill="currentColor"
                                 viewBox="0 0 24 24">
@@ -678,21 +629,12 @@
                                 <path
                                     d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.555.555.9 1.112 1.153 1.772.248.637.415 1.363.465 2.428.05 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.066-.217 1.79-.465 2.428-.254.66-.598 1.216-1.153 1.772-.555.555-1.112.9-1.772 1.153-.637.248-1.363.415-2.428.465-1.066.05-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.066-.05-1.79-.217-2.428-.465-.66-.254-1.216-.598-1.772-1.153-.555-.555-.9-1.112-1.153-1.772-.248-.637-.415-1.363-.465-2.428-.05-1.066-.06-1.405-.06-4.122 0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428.254-.66.598-1.216 1.153-1.772.555-.555 1.112-.9 1.772-1.153.637-.248 1.363-.415 2.428-.465C8.944 2.01 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm6-9a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" />
                             </svg></a>
-                        <a href="#" class="hover:text-white transition"><svg class="w-6 h-6" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                            </svg></a>
                     </div>
                 </div>
             </footer>
 
-
         </div> <!-- /Fin del contenedor con scroll -->
-
     </div>
-
-
 </body>
 
 </html>
