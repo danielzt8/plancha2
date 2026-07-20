@@ -11,7 +11,7 @@
             background: linear-gradient(90deg, #021151 0%, #153fb5 45%, #0d2c88 80%, #03145a 100%);
             background-size: 200% 100%;
             box-shadow: inset 10px 0 20px rgba(0, 0, 0, 0.4);
-            animation: moverLuces 4s ease-in-out infinite alternate;
+            animation: moverLuces 6s ease-in-out infinite alternate;
         }
 
         .bg-stripe:nth-child(even) {
@@ -30,6 +30,7 @@
             100% {
                 background-position: 100% 50%;
             }
+
         }
 
         .bg-circle {
@@ -42,6 +43,60 @@
 
         .bg-btn-yellow {
             background-color: #dadd1a;
+        }
+
+        @keyframes reveal {
+            0% {
+                opacity: 0;
+                transform: scale(0.8) translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .animate-reveal {
+            animation: reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes textReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+                filter: blur(5px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+        }
+
+        .animate-text {
+            opacity: 0;
+            /* Inician ocultas */
+            animation: textReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Tiempos de retraso para el efecto cascada */
+        .delay-1 {
+            animation-delay: 0.6s;
+        }
+
+        /* Espera a que el círculo empiece a aparecer */
+        .delay-2 {
+            animation-delay: 0.8s;
+        }
+
+        .delay-3 {
+            animation-delay: 1.0s;
+        }
+
+        .delay-4 {
+            animation-delay: 1.2s;
         }
     </style>
 </head>
@@ -82,14 +137,28 @@
             </div>
 
             <!-- Círculo principal -->
-            <div class="relative flex items-center justify-center">
+            <div class="relative flex items-center justify-center animate-reveal">
                 <div class="absolute w-[460px] h-[300px] rounded-[100%] border-[25px] border-[#072a78] -z-10"></div>
                 <div
                     class="relative bg-circle w-[400px] h-[400px] rounded-full flex flex-col items-center justify-center text-white shadow-2xl px-6 text-center">
-                    <span class="text-3xl font-black tracking-tight leading-none mt-1">PLANCHA</span>
-                    <span class="text-4xl font-black tracking-tight leading-none mt-1 text-lime-400">VANGUARDIA</span>
-                    <span class="text-5xl font-black text-teal-2026 leading-none mt-2">2026-2028</span>
-                    <span class="text-xs font-bold tracking-[0.2em] mt-3">SODONUCLIM</span>
+
+                    <span class="text-3xl font-black tracking-tight leading-none mt-1 animate-text delay-1">
+                        PLANCHA
+                    </span>
+
+                    <span
+                        class="text-4xl font-black tracking-tight leading-none mt-1 text-lime-400 animate-text delay-2">
+                        VANGUARDIA
+                    </span>
+
+                    <span class="text-5xl font-black text-teal-2026 leading-none mt-2 animate-text delay-3">
+                        2026-2028
+                    </span>
+
+                    <span class="text-xs font-bold tracking-[0.2em] mt-3 animate-text delay-4">
+                        SODONUCLIM
+                    </span>
+
                 </div>
             </div>
 
