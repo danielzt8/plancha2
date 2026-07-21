@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .bg-stripe {
-            background: linear-gradient(90deg, #092C56 0%, #225688 45%, #1a4070 80%, #092C56 100%);
+            background: linear-gradient(90deg, #021151 0%, #153fb5 45%, #0d2c88 80%, #03145a 100%);
             background-size: 200% 100%;
             box-shadow: inset 10px 0 20px rgba(0, 0, 0, 0.4);
             animation: moverLuces 6s ease-in-out infinite alternate;
@@ -34,15 +34,15 @@
         }
 
         .bg-circle {
-            background-color: #225688;
+            background-color: #0c3da7;
         }
 
         .text-teal-2026 {
-            color: #668CA9;
+            color: #009ca6;
         }
 
         .bg-btn-yellow {
-            background-color: #A9CBE0;
+            background-color: #dadd1a;
         }
 
         @keyframes reveal {
@@ -138,7 +138,7 @@
 
             <!-- Círculo principal -->
             <div class="relative flex items-center justify-center animate-reveal">
-                <div class="absolute w-[460px] h-[300px] rounded-[100%] border-[25px] border-[#225688] -z-10"></div>
+                <div class="absolute w-[460px] h-[300px] rounded-[100%] border-[25px] border-[#072a78] -z-10"></div>
                 <div
                     class="relative bg-circle w-[400px] h-[400px] rounded-full flex flex-col items-center justify-center text-white shadow-2xl px-6 text-center">
 
@@ -147,7 +147,7 @@
                     </span>
 
                     <span
-                        class="text-4xl font-black tracking-tight leading-none mt-1 text-[#A9CBE0] animate-text delay-2">
+                        class="text-4xl font-black tracking-tight leading-none mt-1 text-lime-400 animate-text delay-2">
                         VANGUARDIA
                     </span>
 
@@ -164,7 +164,7 @@
 
             <!-- Botón Iniciar -->
             <label for="iniciar"
-                class="relative z-10 mt-12 bg-btn-yellow text-[#092C56] font-bold px-8 py-2.5 rounded-full cursor-pointer hover:scale-105 transition-transform flex items-center gap-2 text-sm shadow-xl">
+                class="relative z-10 mt-12 bg-btn-yellow text-blue-950 font-bold px-8 py-2.5 rounded-full cursor-pointer hover:scale-105 transition-transform flex items-center gap-2 text-sm shadow-xl">
                 <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                 </svg>
@@ -182,24 +182,24 @@
                 class="relative  text-white min-h-screen overflow-hidden flex flex-col">
                 <!-- Barra de Navegación -->
                 <nav
-                    class="sticky top-0 z-50 bg-[#092C56]/90 backdrop-blur-md flex items-center justify-between p-6 lg:p-8">
+                    class="sticky top-0 z-50 bg-[#031139]/90 backdrop-blur-md flex items-center justify-between p-6 lg:p-8">
                     <div class="flex items-center gap-2">
-                        <div class="ml-4 flex flex-col leading-tight border-l-2 border-[#668CA9] pl-4 py-1">
+                        <div class="ml-4 flex flex-col leading-tight border-l-2 border-cyan-300 pl-4 py-1">
                             <span class="text-2xl font-black text-white">VANGUARDIA</span>
-                            <span class="text-xs text-[#668CA9] font-bold tracking-[0.2em]">SODONUCLIM 26-28</span>
+                            <span class="text-xs text-cyan-300 font-bold tracking-[0.2em]">SODONUCLIM 26-28</span>
                         </div>
                     </div>
                     <!-- Menú -->
                     <div class="hidden lg:flex items-center space-x-6">
-                        <a href="#" class="text-sm font-semibold hover:text-[#A9CBE0] transition">Inicio</a>
-                        <a href="#" class="text-sm font-semibold hover:text-[#A9CBE0] transition">Sobre Nosotros</a>
-                        <a href="#" class="text-sm font-semibold hover:text-[#A9CBE0] transition">La Plancha</a>
-                        <a href="#" class="text-sm font-semibold hover:text-[#A9CBE0] transition">Propuesta</a>
-                        <a href="#" class="text-sm font-semibold hover:text-[#A9CBE0] transition">Presidente</a>
-                        <a href="#" class="text-sm font-semibold hover:text-[#A9CBE0] transition">Equipo</a>
-                        <a href="#" class="text-sm font-semibold hover:text-[#A9CBE0] transition">Descarga Propuesta</a>
+                        <a href="#" class="text-sm font-semibold hover:text-lime-400 transition">Inicio</a>
+                        <a href="#" class="text-sm font-semibold hover:text-lime-400 transition">Sobre Nosotros</a>
+                        <a href="#" class="text-sm font-semibold hover:text-lime-400 transition">La Plancha</a>
+                        <a href="#" class="text-sm font-semibold hover:text-lime-400 transition">Propuesta</a>
+                        <a href="#" class="text-sm font-semibold hover:text-lime-400 transition">Presidente</a>
+                        <a href="#" class="text-sm font-semibold hover:text-lime-400 transition">Equipo</a>
+                        <a href="#" class="text-sm font-semibold hover:text-lime-400 transition">Descarga Propuesta</a>
                         <button
-                            class="bg-[#A9CBE0] text-[#092C56] px-7 py-3 rounded-full font-bold text-sm hover:brightness-110 transition shadow-lg shadow-[#092C56]/40">
+                            class="bg-lime-400 text-[#031139] px-7 py-3 rounded-full font-bold text-sm hover:brightness-110 transition shadow-lg shadow-lime-900/40">
                             Contacto
                         </button>
                     </div>
@@ -210,13 +210,13 @@
                     class="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-16 px-6 lg:px-20 py-10 relative z-10 max-w-[1700px] mx-auto items-center">
                     <!-- Columna Izquierda: Texto y Botones -->
                     <div class="space-y-8 max-w-4xl">
-                        <p class="text-sm font-bold text-[#668CA9] tracking-[0.25em] uppercase">
+                        <p class="text-sm font-bold text-cyan-300 tracking-[0.25em] uppercase">
                             — PLANCHA VANGUARDIA —
                         </p>
                         <h1 class="text-6xl lg:text-[90px] font-black leading-none tracking-tight">
                             <span class="text-white">Liderando</span><br />
                             <span class="text-white">el futuro de la</span><br />
-                            <span class="text-[#A9CBE0]">Nutrición Clínica.</span>
+                            <span class="text-lime-400">Nutrición Clínica.</span>
                         </h1>
                         <p class="text-xl lg:text-2xl text-gray-100 leading-relaxed max-w-3xl">
                             Una propuesta construida sobre la evidencia científica, la innovación y el compromiso con
@@ -224,14 +224,14 @@
                         </p>
                         <div class="flex flex-col sm:flex-row items-center gap-6 pt-6">
                             <button
-                                class="w-full sm:w-auto bg-[#A9CBE0] text-[#092C56] px-10 py-4 rounded-full font-bold text-lg hover:brightness-110 transition flex justify-center items-center gap-3 shadow-2xl">
+                                class="w-full sm:w-auto bg-lime-400 text-[#031139] px-10 py-4 rounded-full font-bold text-lg hover:brightness-110 transition flex justify-center items-center gap-3 shadow-2xl">
                                 Conoce nuestra propuesta
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                                     <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
                                 </svg>
                             </button>
                             <button
-                                class="w-full sm:w-auto border-2 border-white px-10 py-4 rounded-full font-bold text-lg text-white hover:bg-white hover:text-[#092C56] transition text-center">
+                                class="w-full sm:w-auto border-2 border-white px-10 py-4 rounded-full font-bold text-lg text-white hover:bg-white hover:text-[#031139] transition text-center">
                                 Conoce la plancha
                             </button>
                         </div>
@@ -240,7 +240,7 @@
                     <!-- Columna Derecha: Panel de Detalles (Misión/Pilares) -->
                     <div class="md:flex md:justify-end md:items-start pt-12 md:pt-0">
                         <div
-                            class="bg-[#092C56]/70 p-10 lg:p-14 rounded-[30px] border border-[#225688] shadow-[0_0_60px_rgba(3,17,57,0.8)] backdrop-blur-md w-full md:max-w-xl space-y-8">
+                            class="bg-[#031139]/70 p-10 lg:p-14 rounded-[30px] border border-[#0d2a71] shadow-[0_0_60px_rgba(3,17,57,0.8)] backdrop-blur-md w-full md:max-w-xl space-y-8">
                             <h2 class="text-3xl font-black text-white leading-tight mb-2">NUESTRA MISIÓN</h2>
                             <p class="text-gray-300 text-sm leading-relaxed mb-6">Somos un equipo de profesionales
                                 comprometidos con fortalecer SODONUCLIM como una sociedad científica moderna,
@@ -249,7 +249,7 @@
                             <!-- Lista de Detalles -->
                             <div class="space-y-8">
                                 <div class="flex items-center gap-6">
-                                    <div class="bg-[#225688] p-5 rounded-2xl flex-shrink-0">
+                                    <div class="bg-[#0d2a71] p-5 rounded-2xl flex-shrink-0">
                                         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -258,13 +258,13 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <p class="text-xs text-[#668CA9] font-bold tracking-[0.2em] uppercase">Pilar 1
+                                        <p class="text-xs text-cyan-300 font-bold tracking-[0.2em] uppercase">Pilar 1
                                         </p>
                                         <p class="text-lg font-bold leading-tight">Fortalecimiento institucional</p>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-6">
-                                    <div class="bg-[#225688] p-5 rounded-2xl flex-shrink-0">
+                                    <div class="bg-[#0d2a71] p-5 rounded-2xl flex-shrink-0">
                                         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -273,14 +273,14 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <p class="text-xs text-[#668CA9] font-bold tracking-[0.2em] uppercase">Pilar 2
+                                        <p class="text-xs text-cyan-300 font-bold tracking-[0.2em] uppercase">Pilar 2
                                         </p>
                                         <p class="text-lg font-bold leading-tight">Educación e Investigación Científica
                                         </p>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-6">
-                                    <div class="bg-[#225688] p-5 rounded-2xl flex-shrink-0">
+                                    <div class="bg-[#0d2a71] p-5 rounded-2xl flex-shrink-0">
                                         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -289,7 +289,7 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <p class="text-xs text-[#668CA9] font-bold tracking-[0.2em] uppercase">Pilar 3
+                                        <p class="text-xs text-cyan-300 font-bold tracking-[0.2em] uppercase">Pilar 3
                                         </p>
                                         <p class="text-lg font-bold leading-tight">Representación y Crecimiento
                                             profesional</p>
@@ -305,22 +305,22 @@
                  SECCIÓN: 01 SOBRE NOSOTROS
                  ============================== -->
             <section
-                class="relative bg-gradient-to-br from-[#092C56] via-[#091b45] to-[#092C56] py-24 px-6 lg:px-20 overflow-hidden text-white">
+                class="relative bg-gradient-to-br from-[#030b20] via-[#091b45] to-[#020716] py-24 px-6 lg:px-20 overflow-hidden text-white">
                 <div class="absolute right-0 top-10 pointer-events-none opacity-60">
                     <svg class="w-[400px] h-[500px]" fill="none" viewBox="0 0 400 500">
-                        <path d="M400 0 C200 0, 50 200, 100 500" stroke="#A9CBE0" stroke-width="1"
+                        <path d="M400 0 C200 0, 50 200, 100 500" stroke="#c1db16" stroke-width="1"
                             stroke-dasharray="4 4" class="opacity-50" />
-                        <path d="M400 100 C250 100, 120 300, 150 500" stroke="#668CA9" stroke-width="1.5"
+                        <path d="M400 100 C250 100, 120 300, 150 500" stroke="#009ca6" stroke-width="1.5"
                             class="opacity-70" />
                     </svg>
                     <div
-                        class="absolute top-[40%] right-10 w-2 h-2 bg-[#A9CBE0] rounded-full shadow-[0_0_15px_5px_rgba(193,219,22,0.5)]">
+                        class="absolute top-[40%] right-10 w-2 h-2 bg-[#c1db16] rounded-full shadow-[0_0_15px_5px_rgba(193,219,22,0.5)]">
                     </div>
                 </div>
 
                 <div class="max-w-[1400px] mx-auto relative z-10">
                     <div class="max-w-3xl">
-                        <p class="text-[#A9CBE0] text-xs font-bold tracking-[0.2em] mb-4 uppercase">
+                        <p class="text-[#c1db16] text-xs font-bold tracking-[0.2em] mb-4 uppercase">
                             01 · Sobre Nosotros & Historia
                         </p>
                         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
@@ -337,9 +337,9 @@
                     <!-- Grid de Tarjetas Pilares -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
                         <div
-                            class="bg-[#0d3362] p-8 rounded-3xl border border-white/5 transition-transform hover:-translate-y-2">
-                            <div class="bg-[#225688] w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-                                <svg class="w-6 h-6 text-[#668CA9]" fill="none" stroke="currentColor"
+                            class="bg-[#121633] p-8 rounded-3xl border border-white/5 transition-transform hover:-translate-y-2">
+                            <div class="bg-[#1b2656] w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                                <svg class="w-6 h-6 text-[#009ca6]" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
@@ -353,9 +353,9 @@
                             </p>
                         </div>
                         <div
-                            class="bg-[#225688] p-8 rounded-3xl shadow-[0_10px_30px_rgba(5,75,180,0.4)] transition-transform hover:-translate-y-2">
-                            <div class="bg-[#668CA9] w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-                                <svg class="w-6 h-6 text-[#A9CBE0]" fill="none" stroke="currentColor"
+                            class="bg-[#054bb4] p-8 rounded-3xl shadow-[0_10px_30px_rgba(5,75,180,0.4)] transition-transform hover:-translate-y-2">
+                            <div class="bg-[#3173d6] w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                                <svg class="w-6 h-6 text-[#c1db16]" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
@@ -369,9 +369,9 @@
                             </p>
                         </div>
                         <div
-                            class="bg-[#0d3362] p-8 rounded-3xl border border-white/5 transition-transform hover:-translate-y-2">
-                            <div class="bg-[#225688] w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-                                <svg class="w-6 h-6 text-[#668CA9]" fill="none" stroke="currentColor"
+                            class="bg-[#121633] p-8 rounded-3xl border border-white/5 transition-transform hover:-translate-y-2">
+                            <div class="bg-[#1b2656] w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                                <svg class="w-6 h-6 text-[#009ca6]" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
@@ -391,10 +391,10 @@
             <!-- ==============================
                  SECCIÓN: 02 LA PLANCHA
                  ============================== -->
-            <section class="relative bg-[#0a2d52] py-24 px-6 lg:px-20 text-white">
+            <section class="relative bg-[#080d24] py-24 px-6 lg:px-20 text-white">
                 <div class="max-w-[1400px] mx-auto relative z-10">
                     <div class="max-w-3xl mb-16">
-                        <p class="text-[#A9CBE0] text-xs font-bold tracking-[0.2em] mb-4 uppercase">
+                        <p class="text-[#c1db16] text-xs font-bold tracking-[0.2em] mb-4 uppercase">
                             02 · La Plancha
                         </p>
                         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
@@ -411,16 +411,16 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <!-- Presidente -->
                         <div
-                            class="bg-[#0d3362] rounded-3xl overflow-hidden border border-white/10 flex flex-col h-full transition-transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#A9CBE0]/10">
+                            class="bg-[#121633] rounded-3xl overflow-hidden border border-white/10 flex flex-col h-full transition-transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#c1db16]/10">
                             <img src="images/heriberto.jpeg" alt="Dr. Heriberto Rodríguez Bonet"
                                 class="w-full h-64 object-cover object-top">
                             <div class="p-6 flex-1 flex flex-col">
                                 <span
-                                    class="inline-block bg-[#A9CBE0] text-[#092C56] text-[10px] font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wider">
+                                    class="inline-block bg-[#dadd1a] text-[#031139] text-[10px] font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wider">
                                     Presidente
                                 </span>
                                 <h3 class="text-lg font-bold mb-1">Dr. Heriberto Rodríguez Bonet</h3>
-                                <p class="text-[#668CA9] text-xs font-semibold mb-3">Cirugía General · Nutrición Clínica
+                                <p class="text-[#009ca6] text-xs font-semibold mb-3">Cirugía General · Nutrición Clínica
                                 </p>
                                 <p class="text-gray-400 text-xs leading-relaxed">
                                     Ideólogo y fundador de SODONUCLIM. Maestro de la Medicina y Cirugía Dominicana.
@@ -432,16 +432,16 @@
 
                         <!-- Vicepresidenta -->
                         <div
-                            class="bg-[#0d3362] rounded-3xl overflow-hidden border border-white/10 flex flex-col h-full transition-transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#A9CBE0]/10">
+                            class="bg-[#121633] rounded-3xl overflow-hidden border border-white/10 flex flex-col h-full transition-transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#c1db16]/10">
                             <img src="images/FOTO_JC.jpeg" alt="Dra. Jenny Cepeda Marte"
                                 class="w-full h-64 object-cover object-top">
                             <div class="p-6 flex-1 flex flex-col">
                                 <span
-                                    class="inline-block bg-[#A9CBE0] text-[#092C56] text-[10px] font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wider">
+                                    class="inline-block bg-[#dadd1a] text-[#031139] text-[10px] font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wider">
                                     Vicepresidenta
                                 </span>
                                 <h3 class="text-lg font-bold mb-1">Dra. Jenny Cepeda Marte</h3>
-                                <p class="text-[#668CA9] text-xs font-semibold mb-3">Nutrición Clínica · Diabetología
+                                <p class="text-[#009ca6] text-xs font-semibold mb-3">Nutrición Clínica · Diabetología
                                 </p>
                                 <p class="text-gray-400 text-xs leading-relaxed">
                                     Nutrióloga clínica y diabetóloga. Coordinadora de Nutrición Clínica de CEMDOE.
@@ -453,16 +453,16 @@
 
                         <!-- Secretaria -->
                         <div
-                            class="bg-[#0d3362] rounded-3xl overflow-hidden border border-white/10 flex flex-col h-full transition-transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#A9CBE0]/10">
+                            class="bg-[#121633] rounded-3xl overflow-hidden border border-white/10 flex flex-col h-full transition-transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#c1db16]/10">
                             <img src="images/Karen Garrido.jpeg" alt="Dra. Karen Garrido"
                                 class="w-full h-64 object-cover object-top">
                             <div class="p-6 flex-1 flex flex-col">
                                 <span
-                                    class="inline-block bg-[#A9CBE0] text-[#092C56] text-[10px] font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wider">
+                                    class="inline-block bg-[#dadd1a] text-[#031139] text-[10px] font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wider">
                                     Secretaria
                                 </span>
                                 <h3 class="text-lg font-bold mb-1">Dra. Karen Garrido</h3>
-                                <p class="text-[#668CA9] text-xs font-semibold mb-3">Nutrición Clínica · Gerencia Hosp.
+                                <p class="text-[#009ca6] text-xs font-semibold mb-3">Nutrición Clínica · Gerencia Hosp.
                                 </p>
                                 <p class="text-gray-400 text-xs leading-relaxed">
                                     Especialista en nutrición hospitalaria y enfermedad renal crónica. Expresidenta CMD
@@ -473,16 +473,16 @@
 
                         <!-- Tesorera -->
                         <div
-                            class="bg-[#0d3362] rounded-3xl overflow-hidden border border-white/10 flex flex-col h-full transition-transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#A9CBE0]/10">
+                            class="bg-[#121633] rounded-3xl overflow-hidden border border-white/10 flex flex-col h-full transition-transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#c1db16]/10">
                             <img src="images/Dra. Maribel.jpeg" alt="Dra. Maribel Gómez"
                                 class="w-full h-64 object-cover object-top">
                             <div class="p-6 flex-1 flex flex-col">
                                 <span
-                                    class="inline-block bg-[#A9CBE0] text-[#092C56] text-[10px] font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wider">
+                                    class="inline-block bg-[#dadd1a] text-[#031139] text-[10px] font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wider">
                                     Tesorera
                                 </span>
                                 <h3 class="text-lg font-bold mb-1">Dra. Maribel Gómez</h3>
-                                <p class="text-[#668CA9] text-xs font-semibold mb-3">Nutrición Clínica · Oncológica y
+                                <p class="text-[#009ca6] text-xs font-semibold mb-3">Nutrición Clínica · Oncológica y
                                     Deportiva</p>
                                 <p class="text-gray-400 text-xs leading-relaxed">
                                     Nutrióloga clínica con especialización en nutrición oncológica y deportiva.
@@ -496,15 +496,15 @@
                     <!-- Vocales Banner -->
                     <!-- Vocales Banner -->
                     <div
-                        class="mt-12 w-full bg-[#092C56] border border-dashed border-gray-600 rounded-[30px] p-8 lg:p-12">
+                        class="mt-12 w-full bg-[#0a0f24] border border-dashed border-gray-600 rounded-[30px] p-8 lg:p-12">
                         <span
-                            class="block text-[#A9CBE0] text-sm font-bold tracking-[0.25em] uppercase text-center mb-8">
+                            class="block text-[#c1db16] text-sm font-bold tracking-[0.25em] uppercase text-center mb-8">
                             Vocales de la Plancha
                         </span>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm text-gray-300">
                             <!-- Ejemplo de estructura para cada Vocal -->
-                            <!-- <div class="bg-[#0d3362] p-4 rounded-xl border border-white/5 flex items-center gap-4">
+                            <!-- <div class="bg-[#161c3b] p-4 rounded-xl border border-white/5 flex items-center gap-4">
                                 <img src="images/luis.jpeg" alt="Dr. Luis Felipe Santana"
                                     class="w-16 h-16 rounded-lg object-cover bg-gray-700">
                                 <div>
@@ -513,7 +513,7 @@
                                 </div>
                             </div> -->
 
-                            <div class="bg-[#0d3362] p-4 rounded-xl border border-white/5 flex items-center gap-4">
+                            <div class="bg-[#161c3b] p-4 rounded-xl border border-white/5 flex items-center gap-4">
                                 <img src="images/yesenia.jpeg" alt="Dra. Yicenia Brito Beltré"
                                     class="w-16 h-16 rounded-lg object-fit bg-gray-700">
                                 <div>
@@ -522,7 +522,7 @@
                                 </div>
                             </div>
 
-                            <div class="bg-[#0d3362] p-4 rounded-xl border border-white/5 flex items-center gap-4">
+                            <div class="bg-[#161c3b] p-4 rounded-xl border border-white/5 flex items-center gap-4">
                                 <img src="images/Dr ManuelC.jpeg" alt="Dr. Manuel García Campos"
                                     class="w-16 h-16 rounded-lg object-cover bg-gray-700">
                                 <div>
@@ -531,7 +531,7 @@
                                 </div>
                             </div>
 
-                            <div class="bg-[#0d3362] p-4 rounded-xl border border-white/5 flex items-center gap-4">
+                            <div class="bg-[#161c3b] p-4 rounded-xl border border-white/5 flex items-center gap-4">
                                 <img src="/images/maximo.jpeg" alt="Dr. Máximo Martínez"
                                     class="w-16 h-16 rounded-lg object-cover bg-gray-700">
                                 <div>
@@ -540,7 +540,7 @@
                                 </div>
                             </div>
 
-                            <div class="bg-[#0d3362] p-4 rounded-xl border border-white/5 flex items-center gap-4">
+                            <div class="bg-[#161c3b] p-4 rounded-xl border border-white/5 flex items-center gap-4">
                                 <img src="images/dra noemi .jpeg" alt="Dra. Ysabel Noemí Tejeda"
                                     class="w-16 h-16 rounded-lg object-cover bg-gray-700">
                                 <div>
@@ -549,7 +549,7 @@
                                 </div>
                             </div>
 
-                            <div class="bg-[#0d3362] p-4 rounded-xl border border-white/5 flex items-center gap-4">
+                            <div class="bg-[#161c3b] p-4 rounded-xl border border-white/5 flex items-center gap-4">
                                 <img src="images/rossy.jpeg" alt="Dra. Rosa E. Rodríguez de B."
                                     class="w-16 h-16 rounded-lg object-cover bg-gray-700">
                                 <div>
@@ -565,12 +565,12 @@
             <!-- ==============================
                  SECCIÓN: 03 PROPUESTA & PARTICIPA
                  ============================== -->
-            <section class="relative bg-[#0a2d52] py-24 px-6 lg:px-20 text-white border-t border-white/5">
+            <section class="relative bg-[#080d24] py-24 px-6 lg:px-20 text-white border-t border-white/5">
                 <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
                     <!-- Columna Izquierda: Ejes Estratégicos -->
                     <div>
-                        <p class="text-[#A9CBE0] text-xs font-bold tracking-[0.2em] mb-4 uppercase">
+                        <p class="text-[#c1db16] text-xs font-bold tracking-[0.2em] mb-4 uppercase">
                             03 · Nuestra Propuesta
                         </p>
                         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
@@ -583,44 +583,44 @@
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                             <ul class="space-y-4">
-                                <li class="flex items-center gap-3"><span class="text-[#A9CBE0] font-bold">1.</span>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">1.</span>
                                     <span class="text-gray-300">Sobrepeso y obesidad</span>
                                 </li>
-                                <li class="flex items-center gap-3"><span class="text-[#A9CBE0] font-bold">2.</span>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">2.</span>
                                     <span class="text-gray-300">Desnutrición hospitalaria</span>
                                 </li>
-                                <li class="flex items-center gap-3"><span class="text-[#A9CBE0] font-bold">3.</span>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">3.</span>
                                     <span class="text-gray-300">Diabetes mellitus tipo 2</span>
                                 </li>
-                                <li class="flex items-center gap-3"><span class="text-[#A9CBE0] font-bold">4.</span>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">4.</span>
                                     <span class="text-gray-300">Nutrición en enf. renal</span>
                                 </li>
-                                <li class="flex items-center gap-3"><span class="text-[#A9CBE0] font-bold">5.</span>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">5.</span>
                                     <span class="text-gray-300">Obesidad infantil</span>
                                 </li>
                             </ul>
                             <ul class="space-y-4">
-                                <li class="flex items-center gap-3"><span class="text-[#A9CBE0] font-bold">6.</span>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">6.</span>
                                     <span class="text-gray-300">Lactancia materna</span>
                                 </li>
-                                <li class="flex items-center gap-3"><span class="text-[#A9CBE0] font-bold">7.</span>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">7.</span>
                                     <span class="text-gray-300">Anemia (def. hierro)</span>
                                 </li>
-                                <li class="flex items-center gap-3"><span class="text-[#A9CBE0] font-bold">8.</span>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">8.</span>
                                     <span class="text-gray-300">Seguridad alimentaria</span>
                                 </li>
-                                <li class="flex items-center gap-3"><span class="text-[#A9CBE0] font-bold">9.</span>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">9.</span>
                                     <span class="text-gray-300">Prevención enf. no transm.</span>
                                 </li>
-                                <li class="flex items-center gap-3"><span class="text-[#A9CBE0] font-bold">10.</span>
+                                <li class="flex items-center gap-3"><span class="text-[#c1db16] font-bold">10.</span>
                                     <span class="text-gray-300">Nutrición geriátrica</span>
                                 </li>
                             </ul>
                         </div>
 
                         <button
-                            class="bg-[#225688] border border-white/10 text-white px-8 py-4 rounded-full font-bold text-sm hover:bg-[#0d3362] transition shadow-lg flex items-center gap-3">
-                            <svg class="w-5 h-5 text-[#A9CBE0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            class="bg-[#1b2656] border border-white/10 text-white px-8 py-4 rounded-full font-bold text-sm hover:bg-[#121633] transition shadow-lg flex items-center gap-3">
+                            <svg class="w-5 h-5 text-[#c1db16]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                             </svg>
@@ -629,7 +629,7 @@
                     </div>
 
                     <!-- Columna Derecha: Formulario Participa -->
-                    <div class="bg-[#0a2d52] p-8 lg:p-10 rounded-[30px] border border-white/5 shadow-2xl">
+                    <div class="bg-[#0e132b] p-8 lg:p-10 rounded-[30px] border border-white/5 shadow-2xl">
                         <h3 class="text-3xl font-black text-white mb-2">Tu voz importa.</h3>
                         <p class="text-gray-400 text-sm mb-8">Creemos en una gestión abierta, participativa y cercana.
                             Queremos escuchar tus ideas y necesidades para construir juntos una SODONUCLIM más fuerte.
@@ -639,31 +639,31 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-sm text-gray-300 mb-2 font-medium">Nombre <span
-                                            class="text-[#A9CBE0]">*</span></label>
+                                            class="text-[#c1db16]">*</span></label>
                                     <input type="text" placeholder="Tu nombre"
-                                        class="w-full bg-[#0d3362] border border-transparent focus:border-[#A9CBE0] rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors">
+                                        class="w-full bg-[#161c3b] border border-transparent focus:border-[#c1db16] rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors">
                                 </div>
                                 <div>
                                     <label class="block text-sm text-gray-300 mb-2 font-medium">Apellido <span
-                                            class="text-[#A9CBE0]">*</span></label>
+                                            class="text-[#c1db16]">*</span></label>
                                     <input type="text" placeholder="Tu apellido"
-                                        class="w-full bg-[#0d3362] border border-transparent focus:border-[#A9CBE0] rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors">
+                                        class="w-full bg-[#161c3b] border border-transparent focus:border-[#c1db16] rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors">
                                 </div>
                             </div>
                             <div>
                                 <label class="block text-sm text-gray-300 mb-2 font-medium">Correo electrónico <span
-                                        class="text-[#A9CBE0]">*</span></label>
+                                        class="text-[#c1db16]">*</span></label>
                                 <input type="email" placeholder="nombre@correo.com"
-                                    class="w-full bg-[#0d3362] border border-transparent focus:border-[#A9CBE0] rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors">
+                                    class="w-full bg-[#161c3b] border border-transparent focus:border-[#c1db16] rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors">
                             </div>
                             <div>
                                 <label class="block text-sm text-gray-300 mb-2 font-medium">Tu propuesta o comentario
-                                    <span class="text-[#A9CBE0]">*</span></label>
+                                    <span class="text-[#c1db16]">*</span></label>
                                 <textarea rows="4" placeholder="Escribe aquí tus ideas..."
-                                    class="w-full bg-[#0d3362] border border-transparent focus:border-[#A9CBE0] rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors resize-none"></textarea>
+                                    class="w-full bg-[#161c3b] border border-transparent focus:border-[#c1db16] rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-colors resize-none"></textarea>
                             </div>
                             <button type="button"
-                                class="w-full bg-[#A9CBE0] text-[#092C56] font-bold text-lg rounded-full py-4 mt-2 hover:brightness-110 transition flex items-center justify-center gap-2 shadow-xl shadow-[#A9CBE0]/10">
+                                class="w-full bg-[#dadd1a] text-[#031139] font-bold text-lg rounded-full py-4 mt-2 hover:brightness-110 transition flex items-center justify-center gap-2 shadow-xl shadow-[#dadd1a]/10">
                                 Enviar propuesta
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                                     <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
@@ -677,31 +677,31 @@
             <!-- ==============================
                  FOOTER
                  ============================== -->
-            <footer class="bg-[#0a2d52] text-white pt-20 pb-10 px-6 lg:px-20 border-t border-white/5">
+            <footer class="bg-[#0e132b] text-white pt-20 pb-10 px-6 lg:px-20 border-t border-white/5">
                 <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
                     <!-- Columna 1 -->
                     <div class="space-y-6">
                         <div class="flex items-center gap-2">
-                            <div class="flex flex-col leading-tight border-l-2 border-[#668CA9] pl-4 py-1">
+                            <div class="flex flex-col leading-tight border-l-2 border-cyan-300 pl-4 py-1">
                                 <span class="text-2xl font-black text-white">VANGUARDIA</span>
-                                <span class="text-xs text-[#668CA9] font-bold tracking-[0.2em]">SODONUCLIM 26-28</span>
+                                <span class="text-xs text-cyan-300 font-bold tracking-[0.2em]">SODONUCLIM 26-28</span>
                             </div>
                         </div>
                         <p class="text-gray-400 text-sm leading-relaxed max-w-sm italic">
                             "Creemos en una SODONUCLIM más fuerte, participativa y preparada para liderar el futuro de
                             la nutrición clínica en la República Dominicana."
                         </p>
-                        <p class="font-bold text-sm text-[#A9CBE0]">— Dr. Heriberto Rodríguez Bonet <br /><span
+                        <p class="font-bold text-sm text-[#c1db16]">— Dr. Heriberto Rodríguez Bonet <br /><span
                                 class="text-xs text-gray-400 font-normal">Presidente · Plancha Vanguardia</span></p>
                     </div>
                     <!-- Columna 2 -->
                     <div>
                         <h3 class="font-bold text-sm tracking-widest text-gray-500 uppercase mb-8">Navegación</h3>
                         <ul class="space-y-4 text-gray-300">
-                            <li><a href="#" class="hover:text-[#A9CBE0] transition">Inicio</a></li>
-                            <li><a href="#" class="hover:text-[#A9CBE0] transition">Sobre Nosotros</a></li>
-                            <li><a href="#" class="hover:text-[#A9CBE0] transition">La Plancha</a></li>
-                            <li><a href="#" class="hover:text-[#A9CBE0] transition">Descargar Propuesta</a></li>
+                            <li><a href="#" class="hover:text-lime-400 transition">Inicio</a></li>
+                            <li><a href="#" class="hover:text-lime-400 transition">Sobre Nosotros</a></li>
+                            <li><a href="#" class="hover:text-lime-400 transition">La Plancha</a></li>
+                            <li><a href="#" class="hover:text-lime-400 transition">Descargar Propuesta</a></li>
                         </ul>
                     </div>
                     <!-- Columna 3 -->
@@ -709,8 +709,8 @@
                         <h3 class="font-bold text-sm tracking-widest text-gray-500 uppercase mb-8">Contacto</h3>
                         <ul class="space-y-4 text-gray-300">
                             <li>República Dominicana</li>
-                            <li><a href="#" class="hover:text-[#A9CBE0] transition">Contacto y Redes Sociales</a></li>
-                            <li><a href="#" class="hover:text-[#A9CBE0] transition">Aviso de privacidad</a></li>
+                            <li><a href="#" class="hover:text-lime-400 transition">Contacto y Redes Sociales</a></li>
+                            <li><a href="#" class="hover:text-lime-400 transition">Aviso de privacidad</a></li>
                         </ul>
                     </div>
                 </div>
@@ -723,7 +723,7 @@
                         Liderando el futuro de la Nutrición Clínica.
                     </p>
                     <!-- Redes -->
-                    <div class="flex gap-6 text-[#A9CBE0]">
+                    <div class="flex gap-6 text-lime-400">
                         <a href="#" class="hover:text-white transition"><svg class="w-6 h-6" fill="currentColor"
                                 viewBox="0 0 24 24">
                                 <path
