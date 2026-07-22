@@ -7,6 +7,38 @@
     <title>Plancha Vanguardia - SODONUCLIM 2026-2028</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+@font-face {
+    font-family: 'Gotham Regular';
+    src: url('gotham/Gotham/Gotham Regular/Gotham Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Medium';
+    src: url('gotham/Gotham/Gotham Medium/Gotham Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('gotham/Gotham/Gotham Bold/Gotham Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Black';
+    src: url('gotham/Gotham/Gotham Black/Gotham Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+.circle-gotham {
+    font-family: 'Gotham Bold', Arial, sans-serif;
+}
+
         .bg-stripe {
             background: linear-gradient(90deg, #092C56 0%, #225688 45%, #1a4070 80%, #092C56 100%);
             background-size: 200% 100%;
@@ -137,10 +169,10 @@
             </div>
 
             <!-- Círculo principal -->
-            <div class="relative flex items-center justify-center animate-reveal">
+            <div style="font-family: gotham;" class="relative flex items-center justify-center animate-reveal">
                 <div class="absolute w-[460px] h-[300px] rounded-[100%] border-[25px] border-[#225688] -z-10"></div>
                 <div
-                    class="relative bg-circle w-[400px] h-[400px] rounded-full flex flex-col items-center justify-center text-white shadow-2xl px-6 text-center">
+                    class="relative bg-circle w-[400px] h-[400px] rounded-full flex flex-col items-center justify-center text-white shadow-2xl px-6 text-center circle-gotham">
 
                     <span class="text-3xl font-black tracking-tight leading-none mt-1 animate-text delay-1">
                         PLANCHA
